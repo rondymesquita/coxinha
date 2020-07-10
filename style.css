@@ -14,18 +14,24 @@ body {
   box-sizing: border-box;
 }
 
-.content {
-}
-
 .content-hero {
+  padding: 24px;
 }
 
-.content-title {
+.content-hero-title {
   font-size: 5em;
   text-align: center;
   font-family: "Galada", cursive;
   color: var(--foreground);
   text-shadow: 3px 3px var(--shadow);
+  padding: 0;
+  margin: 0;
+}
+
+@media (max-width: 320px) {
+  .content-hero-title {
+    font-size: 3em;
+  }
 }
 
 .content-hero-image {
