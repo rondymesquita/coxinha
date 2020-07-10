@@ -1,0 +1,39 @@
+:root {
+  --primary: #3f51b5;
+  --foreground: #fff;
+  --shadow: #212121;
+}
+
+body {
+  background: var(--primary);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.content {
+}
+
+.content-hero {
+}
+
+.content-title {
+  font-size: 5em;
+  text-align: center;
+  font-family: "Galada", cursive;
+  color: var(--foreground);
+  text-shadow: 3px 3px var(--shadow);
+}
+
+.content-hero-image {
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  box-shadow: 0 0 30px -10px var(--shadow);
+}
