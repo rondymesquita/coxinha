@@ -22,6 +22,12 @@ body {
   justify-content: center;
 }
 
+@media (min-width: 780px) {
+  .content {
+    align-items: center;
+  }
+}
+
 .hero-title {
   font-size: 5em;
   text-align: center;
