@@ -1,5 +1,6 @@
 :root {
   --primary: #3f51b5;
+  /* --primary: #1de9b6; */
   --foreground: #fff;
   --shadow: #212121;
 }
@@ -14,11 +15,14 @@ body {
   box-sizing: border-box;
 }
 
-.content-hero {
+.content {
+  height: 100vh;
   padding: 24px;
+  display: flex;
+  justify-content: center;
 }
 
-.content-hero-title {
+.hero-title {
   font-size: 5em;
   text-align: center;
   font-family: "Galada", cursive;
@@ -29,12 +33,12 @@ body {
 }
 
 @media (max-width: 320px) {
-  .content-hero-title {
-    font-size: 3em;
+  .hero-title {
+    font-size: 4em;
   }
 }
 
-.content-hero-image {
+.hero-image {
   display: block;
   margin: 0 auto;
   border-radius: 50%;
