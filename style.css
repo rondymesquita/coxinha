@@ -1,12 +1,38 @@
 :root {
-  --primary: #3f51b5;
-  /* --primary: #1de9b6; */
+  --primary1: #32016e;
+  --primary2: #52018c;
+  --primary3: #ad1457;
+  --accent1: #304ffe;
+  --accent2: #1a237e;
   --foreground: #fff;
   --shadow: #212121;
+  --transition-fast: 0.3s;
 }
 
 body {
-  background: var(--primary);
+  /* background: var(--primary); */
+  background-image: linear-gradient(
+    45deg,
+    var(--accent1),
+    var(--accent2),
+    var(--primary1),
+    var(--primary2),
+    var(--primary3)
+  );
+  background-size: 400% 400%;
+  animation: gradient 35s linear infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 * {
@@ -17,7 +43,6 @@ body {
 
 .content {
   height: 100vh;
-  padding: 24px;
   display: flex;
   justify-content: center;
 }
@@ -51,5 +76,47 @@ body {
   width: 100%;
   max-width: 400px;
   height: auto;
-  box-shadow: 0 0 30px -10px var(--shadow);
+  box-shadow: 0 0 30px -10px var(--foreground);
+}
+
+.center-h {
+  justify-content: center;
+  text-align: center;
+}
+
+.padding {
+  padding: 24px;
+}
+
+.padding--m {
+  padding: 36px;
+}
+
+.padding--l {
+  padding: 48px;
+}
+
+.animate {
+  transition: all;
+  transition-duration: var(--transition-fast);
+}
+
+.button {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-size: 1.3em;
+  color: var(--foreground);
+  padding: 12px 24px;
+  cursor: pointer;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.button:hover {
+  background: var(--primary2);
+}
+
+.button--outline {
+  background: transparent;
+  border: 1px solid var(--foreground);
 }
