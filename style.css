@@ -9,6 +9,12 @@
   --transition-fast: 0.3s;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   /* background: var(--primary); */
   background-image: linear-gradient(
@@ -35,22 +41,10 @@ body {
   }
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 .content {
   height: 100vh;
   display: flex;
   justify-content: center;
-}
-
-@media (min-width: 780px) {
-  .content {
-    align-items: center;
-  }
 }
 
 .hero-title {
@@ -60,8 +54,6 @@ body {
   font-family: "Galada", cursive;
   color: var(--foreground);
   text-shadow: 3px 3px var(--shadow);
-  padding: 0;
-  margin: 0;
   height: 95px;
 }
 
@@ -72,14 +64,6 @@ body {
   font-family: "Galada", cursive;
   color: var(--foreground);
   text-shadow: 3px 3px var(--shadow);
-  padding: 0;
-  margin: 0 0 12px 0;
-}
-
-@media (max-width: 320px) {
-  .hero-title {
-    font-size: 4em;
-  }
 }
 
 .hero-image {
@@ -91,6 +75,30 @@ body {
   height: auto;
   box-shadow: 0 0 30px -10px var(--foreground);
 }
+
+.button {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-size: 1.3em;
+  color: var(--foreground);
+  padding: 12px 24px;
+  cursor: pointer;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.button:hover {
+  background: var(--primary2);
+}
+
+.button--outline {
+  background: transparent;
+  border: 1px solid var(--foreground);
+}
+
+/*
+  Commom
+*/
 
 .center-h {
   justify-content: center;
@@ -114,22 +122,23 @@ body {
   transition-duration: var(--transition-fast);
 }
 
-.button {
-  font-family: "Montserrat", sans-serif;
-  text-transform: uppercase;
-  font-size: 1.3em;
-  color: var(--foreground);
-  padding: 12px 24px;
-  cursor: pointer;
-  border-radius: 6px;
-  text-decoration: none;
+/*
+  Queries
+*/
+
+@media (min-width: 780px) {
+  .content {
+    align-items: center;
+  }
 }
 
-.button:hover {
-  background: var(--primary2);
-}
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 4em;
+    height: 75px;
+  }
 
-.button--outline {
-  background: transparent;
-  border: 1px solid var(--foreground);
+  .button {
+    font-size: 1em;
+  }
 }
